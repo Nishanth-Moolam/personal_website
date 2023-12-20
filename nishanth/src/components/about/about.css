@@ -1,0 +1,27 @@
+
+.about-block { 
+    z-index: 1;
+    background-color: #092635;
+    color: #9EC8B9;
+    min-height: 100vh;
+}
+
+.summary { 
+    padding: 64px 24px 64px 24px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2;
+
+}
+
+.section-title { 
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 24px;
+}
+
+.about-img { 
+    padding: 24px;
+    border-radius: 48px;
+}

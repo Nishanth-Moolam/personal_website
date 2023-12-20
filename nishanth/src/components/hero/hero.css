@@ -1,0 +1,56 @@
+
+@keyframes fadeIn {
+    0% { opacity: 0.1; }
+    100% { opacity: 0.3; }
+  }
+
+.hero-block { 
+    min-height: 100vh;
+    width: 100%;
+    display: block;
+    background-color: #092635;
+    color: #bfebdc;
+}
+
+.carousel {
+    /* width:1200px; */
+    /* height:500px; */
+    margin: auto;
+    /* width: 50%; */
+    /* height: 100%; */
+    object-fit: cover;
+    /* z-index: 0; */
+    padding: 24px;
+
+  }
+
+.hero-img { 
+    position: absolute;
+    height:min-content;
+    object-fit: cover;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100vh;
+    left: 0;
+    opacity: 0.3;
+}
+
+.hero-title { 
+    position: absolute;
+    font-size: 30px; 
+    /* font-weight: 700; */
+    line-height: 1.5;
+    word-spacing: 2px;
+    padding: 48px;
+    z-index: 1;
+    text-align: center;
+}
+
+.project-title { 
+  color: #092635;
+  font-weight: 500;
+}
+
+.fade-transition {
+    animation: fadeIn 2s;
+  }

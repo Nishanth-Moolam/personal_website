@@ -1,0 +1,21 @@
+.contact-block { 
+    background-color: #092635;
+    color: #9EC8B9;
+    padding: 24px;
+    min-height: 90vh;
+
+}
+
+.col { 
+    padding: 12px;
+}
+
+i { 
+    padding: 12px;
+    margin: 24px;
+    color: #9EC8B9;
+}
+
+.contacts { 
+    padding-top: 48px;
+}
