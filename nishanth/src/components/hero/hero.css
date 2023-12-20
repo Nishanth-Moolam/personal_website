@@ -46,6 +46,12 @@
     text-align: center;
 }
 
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 15px;
+  }
+}
+
 .project-title { 
   color: #092635;
   font-weight: 500;

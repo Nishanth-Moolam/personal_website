@@ -16,7 +16,7 @@ const heroData = [
     image: require("../../assets/images/chess1.jpg"),
     description:
       "Chess Game: I created this to challenge myself on Object Oriented Programming Principles. It was also the first of my projects that I hosted on AWS.",
-    link: "https://www.google.com",
+    link: "http://my-chess-game.s3-website-us-east-1.amazonaws.com/",
     disabled: false,
   },
   {
@@ -25,7 +25,7 @@ const heroData = [
     image: require("../../assets/images/language1.jpg"),
     description:
       "Language Learning with Nick: I've always been passionate about language learning, both human and computer. I created this app to help keep track of my progress.",
-    link: "https://www.google.com",
+    link: "https://www.languagelearningwithnick.com/",
     disabled: false,
   },
   {
