@@ -13,7 +13,7 @@ const heroData = [
   {
     id: 1,
     text: "First slide",
-    image: require("../../assets/images/chess1.png"),
+    image: require("../../assets/images/chess1.jpg"),
     description:
       "Chess Game: I created this to challenge myself on Object Oriented Programming Principles. It was also the first of my projects that I hosted on AWS.",
     link: "https://www.google.com",
@@ -22,7 +22,7 @@ const heroData = [
   {
     id: 2,
     text: "Second slide",
-    image: require("../../assets/images/language1.png"),
+    image: require("../../assets/images/language1.jpg"),
     description:
       "Language Learning with Nick: I've always been passionate about language learning, both human and computer. I created this app to help keep track of my progress.",
     link: "https://www.google.com",
@@ -31,7 +31,7 @@ const heroData = [
   {
     id: 3,
     text: "Second slide",
-    image: require("../../assets/images/splitit1.png"),
+    image: require("../../assets/images/splitit1.jpg"),
     description:
       "SplitIt: An application that allows friend groups to split bills with ease.",
     link: "https://www.google.com",
@@ -56,10 +56,10 @@ const AppHero = () => {
               <Image
                 src={
                   index === 0
-                    ? require("../../assets/images/chess.png")
+                    ? require("../../assets/images/chess.jpg")
                     : index === 1
-                    ? require("../../assets/images/language.png")
-                    : require("../../assets/images/splitit.png")
+                    ? require("../../assets/images/language.jpg")
+                    : require("../../assets/images/splitit.jpg")
                 }
                 // src={require("../../assets/images/fcool.jpeg")}
                 alt="Nishanth Moolam"
