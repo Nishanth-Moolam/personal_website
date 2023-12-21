@@ -4,7 +4,6 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
 
 import "./contact.css";
 
@@ -14,21 +13,35 @@ const AppContact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_3cawige",
-        "template_4hgycqt",
-        form.current,
-        "UmE1W2dqsecOpdyh_"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    const formData = new FormData(form.current);
+    const template_params = {};
+    for (let [key, value] of formData.entries()) {
+      template_params[key] = value;
+    }
+
+    console.log({
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: template_params,
+    });
+
+    fetch("https://d27lvf89yc.execute-api.us-east-1.amazonaws.com/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: template_params.name,
+        email: template_params.email,
+        phone: template_params.phone,
+        message: template_params.message,
+      }),
+    })
+      .then((response) => console.log(response.json()))
+      .then((data) => console.log(data))
+      .catch((error) => console.error("Error:", error));
   };
 
   return (
