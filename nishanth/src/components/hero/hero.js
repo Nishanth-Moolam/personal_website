@@ -71,7 +71,7 @@ const AppHero = () => {
               className="carousel"
               activeIndex={index}
               onSelect={handleSelect}
-              interval={7000}
+              interval={5000}
             >
               {heroData.map((item) => (
                 <Carousel.Item key={item.id}>

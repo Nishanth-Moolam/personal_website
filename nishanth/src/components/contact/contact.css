@@ -6,10 +6,6 @@
 
 }
 
-.col { 
-    padding: 12px;
-}
-
 i { 
     padding: 12px;
     margin: 24px;
@@ -18,4 +14,8 @@ i {
 
 .contacts { 
     padding-top: 48px;
+}
+
+.form-field { 
+    padding: 12px;
 }
