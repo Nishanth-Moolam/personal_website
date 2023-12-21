@@ -3,11 +3,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import "./contact.css";
 
 const AppContact = () => {
+  const [status, setStatus] = useState("");
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -39,9 +40,15 @@ const AppContact = () => {
         message: template_params.message,
       }),
     })
-      .then((response) => console.log(response.json()))
+      .then((response) => {
+        form.current.reset(); // Clear the form
+        setStatus("Message sent!"); // Set the status to a success message
+      })
       .then((data) => console.log(data))
-      .catch((error) => console.error("Error:", error));
+      .catch((error) => {
+        setStatus("Message failed to send.");
+        console.error(error);
+      });
   };
 
   return (
@@ -98,6 +105,7 @@ const AppContact = () => {
             </Col>
           </Row>
         </Form>
+        <p>{status}</p>
       </Container>
       <Container className="contacts">
         <Row>
